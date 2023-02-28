@@ -6,7 +6,7 @@ from statistics import mean
 
 if not os.path.exists(".data"):
     dataLogAppend = open(".data", "a")
-    dataLogAppend.write(u"* DATALOG_FILE ⚠️ DO NOT WRITE TO THIS FILE ⚠️\n")
+    dataLogAppend.write("* DATALOG_FILE <️ DO NOT WRITE TO THIS FILE >️\n")
     dataLogAppend.close()
 else:
     dataLogRead = open(".data", "r")
