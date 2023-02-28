@@ -8,7 +8,7 @@ def checkGuess(target, g) -> bool:
     elif guess > target:
         print("Too Big!")
         return False
-    elif guess < target :
+    elif guess < target:
         print("Too Small!")
         return False
     
@@ -22,9 +22,10 @@ while True:
         except ValueError:
             print("\nThat was 100% not a number. Try again.\n")
     print()
-    yesNoAns = input("Would you Like to play again? (y/n)".title()).lower()[0]
+    yesNoAns = input("Would you Like to play again? (y/n) ".title()).lower()[0]
 
     if yesNoAns == 'y':
+        print()
         pass
     else:
         break
