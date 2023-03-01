@@ -2,7 +2,6 @@ import random
 import os
 from stat import S_IREAD
 from stat import S_IWUSR
-from statistics import mean
 
 if not os.path.exists(".data"):
     dataLogAppend = open(".data", "a")
@@ -10,7 +9,7 @@ if not os.path.exists(".data"):
     dataLogAppend.close()
 else:
     dataLogRead = open(".data", "r")
-    numbers = [eval(i) for i in dataLogRead.readlines()][1::]
+    numbers = [eval(i) for i in dataLogRead.readlines()[1::]]
     print(f"\nWelcome Back!\nIt took you on average {round(sum(numbers)/len(numbers))} guesses to win.\nYour High score is {sorted(numbers, reverse=False)[0]}.\n") if len(numbers) > 0 else print()
 
 os.chmod(".data", S_IREAD)
